@@ -4,7 +4,7 @@
   "private":      "true",
   "bin":          "bin",
   "dependencies": {
-    "coffee-script":  "1.9.1",
-    "commander":      "2.6.0"
+    "coffee-script":  "^1.9.1",
+    "commander":      "^2.6.0"
   }
 }
