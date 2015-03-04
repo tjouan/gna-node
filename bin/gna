@@ -1,2 +1,5 @@
 #!/usr/bin/env coffee
 
+CLI = require '../lib/cli'
+
+new CLI(process.argv).run()
