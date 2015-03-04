@@ -1,0 +1,9 @@
+{
+  "name":         "gna",
+  "version":      "0.0.1",
+  "private":      "true",
+  "bin":          "bin",
+  "dependencies": {
+    "coffee-script":  "1.9.1"
+  }
+}
