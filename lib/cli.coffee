@@ -1,6 +1,9 @@
 commander = require 'commander'
 pkg       = require '../package.json'
 
+RunControl  = require './run_control'
+RepoFinder  = require './repo_finder'
+
 
 class Command
   constructor: (args) ->
@@ -19,8 +22,8 @@ class Discover extends Command
   @description:   'search and register repositories in `path\' directory'
 
   run: ->
-    console.log "discover #{@args}"
-
+    (new RepoFinder @args[0]).find (repos) ->
+      RunControl.saveRepos repos
 
 class List extends Command
   @description: 'list registered repositories'
