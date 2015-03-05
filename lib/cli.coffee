@@ -47,7 +47,7 @@ class CLI
       @program
         .command klass.specification ? name
         .description klass.description
-        .action (args..., cmd) =>
+        .action (args..., cmd) ->
           (new commands[cmd.name()](args)).run()
 
   run: ->
