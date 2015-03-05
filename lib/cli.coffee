@@ -10,7 +10,7 @@ class Command
 class Check extends Command
   @description: 'display status for registered repositories'
 
-  run: () ->
+  run: ->
     console.log "check #{@args}"
 
 
@@ -18,14 +18,14 @@ class Discover extends Command
   @specification: 'discover <path>'
   @description:   'search and register repositories in `path\' directory'
 
-  run: () ->
+  run: ->
     console.log "discover #{@args}"
 
 
 class List extends Command
   @description: 'list registered repositories'
 
-  run: () ->
+  run: ->
     console.log "list #{@args}"
 
 
