@@ -38,8 +38,8 @@ class CLI
     list:     List
 
   constructor: (argv, commands = @COMMANDS) ->
-    @argv     = argv
-    @program  = commander.version pkg.version
+    @arguments  = argv
+    @program    = commander.version pkg.version
     for name, klass of commands
       @program
         .command klass.specification ? name
@@ -48,7 +48,7 @@ class CLI
           (new commands[cmd.name()](args)).run()
 
   run: ->
-    @program.parse @argv
+    @program.parse @arguments
     if @program.args.length == 0
       @program.outputHelp()
     else if typeof @program.args[0] == 'string'
