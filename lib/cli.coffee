@@ -51,7 +51,7 @@ class CLI
     @program.parse @arguments
     if @program.args.length == 0
       @program.outputHelp()
-    else if typeof @program.args[0] == 'string'
+    else if @program.args.length == 1 && typeof @program.args[0] == 'string'
       @program.outputHelp()
       process.exit @EX_USAGE
 
