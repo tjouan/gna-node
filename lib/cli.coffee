@@ -37,15 +37,15 @@ class CLI
     discover: Discover
     list:     List
 
-  constructor: (argv) ->
+  constructor: (argv, commands = @COMMANDS) ->
     @argv     = argv
     @program  = commander.version pkg.version
-    for name, klass of @COMMANDS
+    for name, klass of commands
       @program
         .command klass.specification ? name
         .description klass.description
         .action (args..., cmd) =>
-          (new @COMMANDS[cmd.name()](args)).run()
+          (new commands[cmd.name()](args)).run()
 
   run: ->
     @program.parse @argv
