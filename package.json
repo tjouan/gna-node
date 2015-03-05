@@ -1,10 +1,10 @@
 {
-  "name":         "gna",
-  "version":      "0.0.1",
-  "private":      "true",
-  "bin":          "bin",
+  "name": "gna",
+  "version": "0.0.1",
+  "private": "true",
+  "bin": "bin",
   "dependencies": {
-    "coffee-script":  "^1.9.1",
-    "commander":      "^2.6.0"
+    "coffee-script": "^1.9.1",
+    "commander": "^2.6.0"
   }
 }
