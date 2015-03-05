@@ -1,4 +1,5 @@
-pkg = require '../package.json'
+commander = require 'commander'
+pkg       = require '../package.json'
 
 
 class Command
@@ -38,8 +39,7 @@ class CLI
 
   constructor: (argv) ->
     @argv     = argv
-    @program  = require 'commander'
-      .version pkg.version
+    @program  = commander.version pkg.version
     for name, klass of @COMMANDS
       @program
         .command klass.specification ? name
