@@ -1,8 +1,7 @@
-commander = require 'commander'
-pkg       = require '../package.json'
-
-RunControl  = require './run_control'
-RepoFinder  = require './repo_finder'
+commander   = require 'commander'
+pkg         = require '../package.json'
+RunControl  = require 'run_control'
+RepoFinder  = require 'repo_finder'
 
 
 class Command

@@ -1,5 +1,5 @@
 assert      = require 'assert'
-RepoFinder  = require '../lib/repo_finder'
+RepoFinder  = require 'repo_finder'
 
 
 describe 'RepoFinder', ->

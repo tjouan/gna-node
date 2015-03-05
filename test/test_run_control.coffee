@@ -1,6 +1,6 @@
 assert  = require 'assert'
 fs      = require 'fs'
-rc      = require '../lib/run_control'
+rc      = require 'run_control'
 
 
 describe 'RunControl', ->

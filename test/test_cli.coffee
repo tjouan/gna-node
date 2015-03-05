@@ -1,5 +1,5 @@
 assert  = require 'assert'
-CLI     = require '../lib/cli'
+CLI     = require 'cli'
 
 
 describe 'CLI', ->
