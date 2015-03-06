@@ -24,6 +24,7 @@ class Discover extends Command
     (new RepoFinder @args[0]).find (repos) ->
       RunControl.saveRepos repos
 
+
 class List extends Command
   @description: 'list registered repositories'
 
@@ -51,9 +52,9 @@ class CLI
 
   run: ->
     @program.parse @arguments
-    if @program.args.length == 0
+    if @program.args.length is 0
       @program.outputHelp()
-    else if @program.args.length == 1 && typeof @program.args[0] == 'string'
+    else if @program.args.length is 1 and typeof @program.args[0] is 'string'
       @program.outputHelp()
       process.exit @EX_USAGE
 
