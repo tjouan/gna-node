@@ -29,7 +29,9 @@ class List extends Command
   @description: 'list registered repositories'
 
   run: ->
-    console.log "list #{@args}"
+    RunControl.readRepos (repos) ->
+      for r in repos
+        console.log r
 
 
 class CLI
