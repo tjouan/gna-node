@@ -6,6 +6,7 @@ RunControl =
 
   readRepos: (f) ->
     fs.readFile @FILE_PATH, encoding: 'utf8', (err, data) ->
+      throw err if err
       f data.split(/\n/).filter (e) -> e
 
   saveRepos: (repos, done) ->
