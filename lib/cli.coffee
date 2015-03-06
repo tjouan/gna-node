@@ -2,6 +2,7 @@ commander   = require 'commander'
 pkg         = require '../package.json'
 RunControl  = require 'run_control'
 RepoFinder  = require 'repo_finder'
+Repository  = require 'repository'
 
 
 class Command
@@ -13,7 +14,10 @@ class Check extends Command
   @description: 'display status for registered repositories'
 
   run: ->
-    console.log "check #{@args}"
+    RunControl.readRepos (repos) ->
+      for r in repos
+        (new Repository r).check (output) ->
+          console.log output
 
 
 class Discover extends Command
