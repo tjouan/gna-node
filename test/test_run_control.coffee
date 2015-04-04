@@ -10,7 +10,7 @@ describe 'RunControl', ->
     rc.FILE_PATH = rc_path
     fs.mkdir 'tmp', (e) ->
       throw e if e?.code? and e.code != 'EEXIST'
-      fs.unlink rc_path
+      fs.unlink rc_path, ->
 
   describe '#readRepos', ->
     it 'saves given paths in the run control config file', (done) ->
