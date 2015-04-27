@@ -14,4 +14,5 @@ class Repository
           #{stdout}
           """
 
+
 module.exports = Repository

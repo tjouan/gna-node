@@ -16,7 +16,7 @@ class Check extends Command
   run: ->
     RunControl.readRepos (repos) ->
       for r in repos
-        (new Repository r).check (output) ->
+        new Repository(r).check (output) ->
           console.log output
 
 
@@ -25,7 +25,7 @@ class Discover extends Command
   @description:   'search and register repositories in `path\' directory'
 
   run: ->
-    (new RepoFinder @args[0]).find (repos) ->
+    new RepoFinder(@args[0]).find (repos) ->
       RunControl.saveRepos repos
 
 
