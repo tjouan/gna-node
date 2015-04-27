@@ -14,11 +14,10 @@ describe 'RunControl', ->
 
   describe '#readRepos', ->
     it 'saves given paths in the run control config file', (done) ->
-      fs.writeFile rc_path, "foo\nbar\n", (err) ->
-        throw err if err
-        rc.readRepos (repos) ->
-          assert.deepEqual ['foo', 'bar'], repos
-          done()
+      fs.writeFileSync rc_path, "foo\nbar\n"
+      rc.readRepos (repos) ->
+        assert.deepEqual ['foo', 'bar'], repos
+        done()
 
   describe '#saveRepos', ->
     it 'saves given paths in the run control config file', (done) ->
