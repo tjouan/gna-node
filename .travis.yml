@@ -1,7 +1,8 @@
 language: node_js
 node_js:
-  - 0.12
+  - node
   - iojs
 notifications:
   email:
     - tj+travis_gna_node@a13.fr
+  on_success: never
